@@ -32,6 +32,10 @@ app.use(helmet());
 //라우터 연결하기
 app.use('/api', [userRouter]);
 
+app.get('/', (req, res) => {
+  res.status(200).json({ result: '조회성공' });
+});
+
 app.listen(3000, () => {
   console.log('3000포트로 서버가 켜졌습니다.');
 });
