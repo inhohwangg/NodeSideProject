@@ -7,19 +7,6 @@ require('dotenv').config();
 const SignUp = async (req, res) => {
   const { userId, passWord, passWordCheck, nickName } = req.body;
 
-  if (userId === '' || userId === undefined || userId === null)
-    res.status(400).json({ errorMessage: '아이디를 입력해주세요' });
-  if (passWord === '' || passWord === undefined || passWord === null)
-    res.status(400).json({ errorMessage: '비밀번호를 입력해주세요' });
-  if (
-    passWordCheck === '' ||
-    passWordCheck === undefined ||
-    passWordCheck === null
-  )
-    res.status(400).json({ errorMessage: '비밀번호 확인을 입력해주세요' });
-  if (nickName === '' || nickName === undefined || nickName === null)
-    res.status(400).json({ errorMessage: '닉네임을 입력해주세요' });
-
   const form = 'webSite';
   const hashed = bcrypt.hashSync(passWord, 10);
   await User.create({
