@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   development: {
@@ -6,20 +6,20 @@ module.exports = {
     password: process.env.PASSWORD,
     database: process.env.DBNAME,
     host: process.env.HOST,
-    dialect: 'mysql',
+    dialect: "mysql",
   },
   test: {
     username: process.env.NAME,
     password: process.env.PASSWORD,
     database: process.env.DBNAME,
     host: process.env.HOST,
-    dialect: 'mysql',
+    dialect: "mysql",
   },
   production: {
     username: process.env.NAME,
     password: process.env.PASSWORD,
     database: process.env.DBNAME,
     host: process.env.HOST,
-    dialect: 'mysql',
+    dialect: "mysql",
   },
 };
